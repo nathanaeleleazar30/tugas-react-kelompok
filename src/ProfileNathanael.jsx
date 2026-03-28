@@ -12,28 +12,29 @@ const ProfileNathanael = () => {
   return (
     <div className="min-h-screen bg-slate-100 font-sans selection:bg-indigo-200 selection:text-indigo-900 pb-16 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
       
-      {/* --- HEADER PANORAMA (STANDAR LINKEDIN/PORTFOLIO) --- */}
+      {/* --- HEADER PANORAMA (PERBAIKAN: BG-TOP & TALLER) --- */}
       <div 
-        className="w-full h-48 sm:h-64 md:h-72 bg-slate-800 relative bg-cover bg-center"
+        className="w-full h-64 sm:h-80 md:h-[450px] bg-slate-900 relative bg-cover bg-top transition-all duration-500"
         style={{ backgroundImage: "url('/header-bg.jpg')" }} 
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/60 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none"></div>
+        {/* Gradient diperhalus agar foto atas tetap jernih */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-slate-900/80 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
       </div>
 
-      {/* --- MAIN CONTENT CONTAINER (Melayang menimpa Header) --- */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 md:-mt-28 relative z-10">
+      {/* --- MAIN CONTENT CONTAINER --- */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32 md:-mt-44 relative z-10">
         <div className="bg-white/95 backdrop-blur-xl rounded-[2.5rem] shadow-2xl p-6 sm:p-10 lg:p-12 border border-white/50 transition-all duration-300">
           
           {/* --- TOP SECTION: FOTO (KIRI) & DOWNLOAD CV (KANAN) --- */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end -mt-24 md:-mt-32 mb-8 gap-6 lg:gap-0">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end -mt-28 md:-mt-36 mb-8 gap-6 lg:gap-0">
             
             {/* KIRI: Foto Profil */}
             <div className="relative group cursor-pointer shrink-0">
               <img
                 src="/foto-profil.jpg"
                 alt="Foto Profil Nathanael Eleazar Handata"
-                className="w-40 h-40 md:w-52 md:h-52 rounded-full border-[6px] md:border-[8px] border-white object-cover shadow-2xl transition-all duration-500 group-hover:scale-105 bg-slate-100 relative z-10"
+                className="w-44 h-44 md:w-56 md:h-56 rounded-full border-[6px] md:border-[8px] border-white object-cover shadow-2xl transition-all duration-500 group-hover:scale-105 bg-slate-100 relative z-10"
               />
               <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-20 flex h-7 w-7 md:h-8 md:w-8 items-center justify-center">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -42,7 +43,7 @@ const ProfileNathanael = () => {
             </div>
 
             {/* KANAN: Tombol Aksi Utama */}
-            <div className="flex w-full lg:w-auto lg:pb-4">
+            <div className="flex w-full lg:w-auto lg:pb-6">
               <a href="/CV_NATHANAEL.pdf" download className="w-full lg:w-auto px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-bold rounded-2xl shadow-lg hover:shadow-indigo-500/40 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 Download CV
@@ -125,6 +126,17 @@ const ProfileNathanael = () => {
                     <div>
                       <span className="block font-bold text-sm text-white">LinkedIn</span>
                       <span className="block font-medium text-xs text-slate-300 group-hover/btn:text-blue-100">Nathanael Eleazar</span>
+                    </div>
+                  </a>
+
+                  {/* INSTAGRAM BUTTON */}
+                  <a href="https://instagram.com/nthanaellll" target="_blank" rel="noreferrer" className="flex items-center gap-4 bg-white/10 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] p-3.5 rounded-2xl transition-all duration-300 border border-white/10 group/btn transform hover:-translate-y-1">
+                    <div className="bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] group-hover/btn:bg-white text-white group-hover/btn:text-[#ee2a7b] p-2 rounded-xl transition-colors">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                    <div>
+                      <span className="block font-bold text-sm text-white">Instagram</span>
+                      <span className="block font-medium text-xs text-slate-300 group-hover/btn:text-pink-100">@nthanaellll</span>
                     </div>
                   </a>
 
