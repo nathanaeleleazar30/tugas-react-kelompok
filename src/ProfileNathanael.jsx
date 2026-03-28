@@ -54,7 +54,7 @@ const ProfileNathanael = () => {
           <div className="border-b border-slate-100 pb-8 text-left">
             <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">Nathanael Eleazar Handata</h1>
             <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mt-1">
-              Undergraduate Student of Information Technology
+              Undergraduate Student of Information Technologi
             </p>
 
             <div className="flex flex-wrap gap-3 mt-5 text-sm font-semibold">
