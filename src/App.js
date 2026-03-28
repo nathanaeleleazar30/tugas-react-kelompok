@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import ProfileNathanael from './ProfileNathanael';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Jika buka localhost:3000 biasa, arahkan ke halaman profilmu */}
+        <Route path="/" element={<Navigate to="/nathanael" replace />} />
+        
+        {/* URL spesifik untuk halamanmu */}
+        <Route path="/nathanael" element={<ProfileNathanael />} />
+        
+        {/* Nanti temanmu bisa tambahkan route mereka di sini */}
+        {/* <Route path="/surya" element={<ProfileSurya />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
